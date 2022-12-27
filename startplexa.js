@@ -4,12 +4,6 @@ function myfunction() {
     xhr.open("POST", url);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Content-Length", "0");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
-        }
-    };
+    //xhr.setRequestHeader("Content-Length", "0");
     xhr.send();
 }
