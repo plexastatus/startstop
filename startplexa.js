@@ -10,7 +10,7 @@ function myfunction() {
             console.log(xhr.status);
             console.log(xhr.responseText);
         }
-        alert(xhr.readyState);
     };
     xhr.send();
+    alert("Request to start Plexa has been received.. Plexa should be ready to serve the content in 5 minutes...");
 }
