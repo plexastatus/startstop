@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="style.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="//use.typekit.net/lzd2nbb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type = "text/javascript">
+    function StartPlexa()
+    {
+      var url="https://prod-21.centralus.logic.azure.com:443/workflows/493f210daeda498d8e2c8f7434ace239/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=eOpgs2zh7jI1rc5hIcfluwZgYbQOuuYFJ1Nf0adbdng";
+      var xhr=new XMLHttpRequest();
+      xhr.open("POST",url);
+      xhr.setRequestHeader("Accept","application/json");
+      xhr.setRequestHeader("Content-Type","application/json");
+      xhr.setRequestHeader("Content-Length","0");
+      xhr.onreadystatechange=function()
+      {
+        if(xhr.readyState===4)
+          {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+          }
+      };
+      xhr.send();
+      location = 'http://jsbin.com/ukifoh/1';
+    }
+  </script>
+  
+  <link href="favicon.ico" rel="shortcut icon">
+  
+  <title>Plexa</title>
+  
+</head>
+
+<body>
+
+  <div id="placeholder">
+
+    <span class="logo">Forge</span>
+
+    <p>Click the following button to Start Plexa for 3 hours...</p>
+    <form data-forge-name="Plexa">
+      <input align="center" type="text" placeholder="Enter your Name" data-forge-name="Name" autofocus>
+      <input type = "submit" onclick = "StartPlexa()" value = "Start Plexa">
+    </form>
+    
+    <iframe src="https://statuspage.freshping.io/64616-Plexa" height="100%" width="100%"></iframe>
+
+  </div>
+
+</body>
+
+</html>
