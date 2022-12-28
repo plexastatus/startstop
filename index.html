@@ -7,6 +7,10 @@
     <link href="style.css" rel="stylesheet" />
     <script type = "text/javascript" src="startplexa.js"></script>
      <script>
+        function sleep(ms) {
+              return new Promise(resolve => setTimeout(resolve, ms));
+           }
+
        window.addEventListener("load", function () {
           //not jquery!
           // Access the form element...
@@ -17,6 +21,9 @@
               event.preventDefault(); // prevent form submission and reloading the page.
               //your code to validate or do what you need with the form.
               myfunction();
+              await sleep(3000);
+              window.location.replace("http://plexastatus.jigar.one");
+              return false; 
           });
       });
     </script>
