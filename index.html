@@ -11,7 +11,7 @@
               return new Promise(resolve => setTimeout(resolve, ms));
            }
 
-       window.addEventListener("load", function () {
+       window.addEventListener("load", async function () {
           //not jquery!
           // Access the form element...
           var form = document.getElementById("startplexa");
