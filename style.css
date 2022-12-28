@@ -32,6 +32,10 @@ body {
   margin-left: -250px;
 }
 
+form {
+  text-align: center;
+}
+
 span.logo {
   width: 140px;
   height: 140px;
