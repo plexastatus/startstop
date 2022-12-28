@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet" />
     <script type = "text/javascript" src="startplexa.js"></script>
+     <script>
+       window.addEventListener("load", function () {
+          //not jquery!
+          // Access the form element...
+          var form = document.getElementById("startplexa");
+          
+          // ...and take over its submit event.
+          form.addEventListener("submit", function (event) {
+              event.preventDefault(); // prevent form submission and reloading the page.
+              //your code to validate or do what you need with the form.
+              myfunction();
+          });
+      });
+    </script>
     <link href="favicon.ico" rel="shortcut icon">
     <title>Plexa</title>
   </head>
@@ -15,7 +29,7 @@
       <span class="logo">Plexa</span>
       <p>Click the following button to Start Plexa for 3 hours</p>
       <center>
-        <form onsubmit="myfunction()">
+        <form id="startplexa" onsubmit="myfunction()">
           <!-- <input type="text" placeholder="Enter your Name" autofocus> -->
           <input type = "submit" value = "Start Plexa">
         </form>
